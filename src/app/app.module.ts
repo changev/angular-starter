@@ -11,7 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'environments/environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
+import { NgxGraphModule } from '@swimlane/ngx-graph';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
@@ -59,6 +61,8 @@ type StoreType = {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
     }),
+    NgxGraphModule,
+    NgxChartsModule,
 
     /**
      * This section will import the `DevModuleModule` only in certain build types.
